@@ -2,19 +2,160 @@
 <html lang="en">
 <head>
   <!-- include head.html -->
-  @@include('../layouts/head.html', {
-    "title": "HTML Boilerplate"
-  })
+  <title>HTML Boilerplate</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+<!-- favicon -->
+<link href="images/favicon.ico" type="image/x-icon" rel="icon">
+<!-- meta social -->
+<meta name="twitter:card" content="" />
+<meta name="twitter:site" content="" />
+<meta name="twitter:creator" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<meta property="og:site_name" content="">
+<meta property="og:title" content="" />
+<meta property="og:type" content="">
+<meta property="og:url" content="" />
+<!-- Google Font -->
   <!-- include styles.html -->
-  @@include('../layouts/styles.html')
+  <!-- build:css(.) styles/vendor.min.css -->
+<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="node_modules/jquery.mmenu/dist/jquery.mmenu.all.css" />
+<link rel="stylesheet" type="text/css" href="node_modules/slick-carousel/slick/slick-theme.scss" />
+<!-- endbuild -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<!-- build:css(.tmp) styles/style.min.css -->
+<link rel="stylesheet" type="text/css" href="styles/main.css" />
+<!-- endbuild -->
 </head>
 <body>
   <div class="wrapper">
     <!-- include header.html -->
-    @@include('../layouts/header.html')
+    <header class="header-container">
+  <div class="header-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 align-self-center">
+          <a class="logo" href="#" title="">
+            <img class="align-self-center" src="./images/logo.png" width="120px" alt="logo">
+          </a>
+        </div>
+        <div class="col-sm-6 align-self-center d-none d-lg-block">
+          <h2 class="name-company">Công ty du lịch Khải Hoàn Phú</h2>
+        </div>
+        <div class="col-sm-3 align-self-center d-none d-lg-block">
+          <p class="hotline">
+            <span class="phone-item">05113 759 759</span>
+            <span class="phone-item">0913 44 11 56 </span>
+          </p>
+        </div>
+        <button id="menu"><span></span></button>
+      </div>
+    </div>
+    <!-- menu -->
+    <div class="p-menu">
+        <div class="container">
+          <nav id="drop_down" class="menu-menu-1-container">
+            <ul id="menu-menu-1" class="lh2-ul">
+              <li class="menu-item"><a class="link-menu" href="#">Trang chủ</a></li>
+              <li class="menu-item">
+                <a class="link-menu" href="#">Cho thuê xe du lịch tự lái</a>
+                <ul class="sub-menu">
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 01</a></li>
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 02</a></li>
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 03</a></li>
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 04</a></li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a class="link-menu" href="#">Tour</a>
+                <ul class="sub-menu">
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 01</a></li>
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 02</a></li>
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 03</a></li>
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 04</a></li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a class="link-menu" href="#">Khách sạn</a>
+                <ul class="sub-menu">
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 01</a></li>
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 02</a></li>
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 03</a></li>
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 04</a></li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a class="link-menu" href="#">Bảng giá</a>
+                <ul class="sub-menu">
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 01</a></li>
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 02</a></li>
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 03</a></li>
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 04</a></li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a class="link-menu" href="#">Tin Tức</a>
+                <ul class="sub-menu">
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 01</a></li>
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 02</a></li>
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 03</a></li>
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 04</a></li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a class="link-menu" href="#">Liên Hệ</a>
+                <ul class="sub-menu">
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 01</a></li>
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 02</a></li>
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 03</a></li>
+                  <li class="menu-item"><a class="link-menu" href="#">Menu Item 04</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+    </div>
+  </div>
+  <!-- header -->
+</header>
 
     <!-- include banner.html -->
-    @@include('../partials/banner.html')
+    <section class="banner-container">
+  <div class="block-container">
+    <div class="Modern-Slider">
+      <!-- Item -->
+      <div class="item">
+        <div class="img-fill">
+          <img src="http://xetulaithanglong.com/wp-content/uploads/2016/08/Banner-sua-lai-2.jpg" alt="">
+          <div class="info">
+            <div>
+              <h3>DỊCH VỤ CHO THUÊ XE</h3>
+              <h5>Khải Hoàn Phú là công ty hoạt động nhiều năm trong lĩnh vực cho thuê xe. Chúng tôi cho thuê mọi loại xe từ 4 chỗ đến 45 chỗ phục vụ mọi nhu cầu đa dạng của khách hàng. Mọi nhu cầu thuê xe đi công tác, thuê xe cưới hỏi, thuê bao theo tháng, thuê xe đi tham quan thắng cảnh hay lễ hội đều được phục vụ kịp thời và chu đáo. Đội ngũ lái xe nhiều kinh nghiệm phục vụ tận tình sẽ giúp Quý khách có những chuyến đi an toàn và thoải mái nhất.</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // Item -->
+      <!-- Item -->
+      <div class="item">
+        <div class="img-fill">
+          <img src="https://4.bp.blogspot.com/-FS93jHaOnDM/WBcKWsZTeQI/AAAAAAAABq0/ChDhLi1MxQYTAhNUij3GIIdqr3PpktskwCLcB/s1600/carrental-banner.jpg" alt="">
+          <div class="info">
+            <div>
+              <h3>Fully responsive Scales with its container</h3>
+              <h5>Donec id ornare dui. Aenean tristique condimentum elit, quis blandit nisl varius sit amet. Sed eleifend felis quis massa viverra</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // Item -->
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</section>
 
     <section class="main-container">
       <div class="slider-animation background-primary">
@@ -288,10 +429,104 @@
     </section>
 
     <!-- include footer.html -->
-    @@include('../layouts/footer.html')
+    <footer class="footer-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item-block">
+        <ul class="list-menu-footer">
+          <span class="name-primary"><span class="icon-item icon-info"></span> Infomation</span>    
+          <li class="item">
+            <a href="#">Infomation</a>
+          </li>
+          <li class="item">
+            <a href="#">Infomation</a>
+          </li>
+          <li class="item">
+            <a href="#">Infomation</a>
+          </li>
+          <li class="item">
+            <a href="#">Infomation </a>
+          </li>
+          <li class="item">
+            <a href="#">Infomation</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item-block">
+        <ul class="list-menu-footer">
+          <span class="name-primary"> <span class="icon-item icon-motorcycle"></span> Cho thuê xe</span>    
+          <li class="item">
+            <a href="#">Cho thuê xe</a>
+          </li>
+          <li class="item">
+            <a href="#">Cho thuê xe</a>
+          </li>
+          <li class="item">
+            <a href="#">Cho thuê xe</a>
+          </li>
+          <li class="item">
+            <a href="#">Cho thuê xe </a>
+          </li>
+          <li class="item">
+            <a href="#">Cho thuê xe</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item-block">
+        <ul class="list-menu-footer">
+          <span class="name-primary"> <span class="icon-item icon-car-compact"></span> Document</span>    
+          <li class="item">
+            <a href="#">Document 1</a>
+          </li>
+          <li class="item">
+            <a href="#">Document 2</a>
+          </li>
+          <li class="item">
+            <a href="#">Document 3</a>
+          </li>
+          <li class="item">
+            <a href="#">Document 4</a>
+          </li>
+          <li class="item">
+            <a href="#">Document 5</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item-block">
+        <ul class="list-menu-footer">
+          <span class="name-primary"><span class="icon-item icon-car-compact"></span> Contact US</span>    
+          <li class="item">
+            <a href="#">Contact 1</a>
+          </li>
+          <li class="item">
+            <a href="#">Contact 2</a>
+          </li>
+          <li class="item">
+            <a href="#">Contact 3</a>
+          </li>
+          <li class="item">
+            <a href="#">Contact 4</a>
+          </li>
+          <li class="item">
+            <a href="#">Contact 5</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</footer>
   </div>
 
   <!-- include scripts.html -->
-  @@include('../layouts/scripts.html')
+  <!-- build:js(.) scripts/vendor.min.js -->
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="node_modules/jquery.mmenu/dist/jquery.mmenu.all.js"></script>
+<script type="text/javascript" src="node_modules/slick-carousel/slick/slick.min.js"></script>
+<!-- endbuild -->
+<!-- build:js scripts/script.min.js -->
+<script type="text/javascript" src="scripts/script.js"></script>
+<!-- endbuild -->
 </body>
 </html>

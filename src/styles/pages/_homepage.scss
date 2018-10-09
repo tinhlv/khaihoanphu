@@ -1,0 +1,104 @@
+
+.card {
+  .card-img-top {
+    min-height: 240px;
+  }
+  
+  .card-title {
+    font-family: $font-family;
+    font-weight: 600;
+  }
+
+  .card-body {
+    @include rem("padding", 8, 10, 8, 10);
+  }
+}
+
+.block-news {
+  h3 {
+    @include rem("font-size", 20);
+    @include rem("padding", 25, 0, 25, 0);
+    color: $color-blue;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: $font-family;
+    position: relative;
+    &::after {
+      display: inline-block;
+      content: "";
+      border-top: 0.2rem solid $color-blue;
+      width: 3rem;
+      margin: 0 1rem;
+      transform: translateY(-1rem);
+      bottom: 10px;
+      position: absolute;
+    }
+  }
+}
+
+.heading-white {
+  color: $color-white !important;
+  &::after {
+    border-top: 0.2rem solid $color-white !important;
+  }
+}
+
+.form-booking {
+  @include rem("padding", 15, 15, 15, 15);
+  h3{
+    @include rem("font-size", 20);
+    @include rem("padding", 25, 0, 25, 0);
+    color: $color-white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: $font-family;
+  }
+  .form-control {
+    @include rem("padding-left", 15);
+  }
+}
+
+// support block
+.heading-basic {
+  @include rem("font-size", 20);
+  @include rem("padding", 25, 0, 5, 0);
+  color: $color-blue;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: $font-family;
+  position: relative;
+  &.has-boder {
+    border-bottom: 3px solid #e2e2e2;
+  }
+}
+
+.list-support {
+  .item {
+    @include rem("padding", 32, 0, 32, 0);
+    border-bottom: 2px solid #e2e2e2;
+    @include breakpoint(769) {
+      @include rem("padding", 15, 0, 15, 0);
+    }
+    .title-support {
+      color: #5c6f7d;
+      text-transform: uppercase;
+      font-family: $font-family;
+      font-weight: 700;
+      @include rem("font-size", 18);
+    }
+    .info-support {
+      color: $color-blue;
+      text-transform: uppercase;
+      font-family: $font-family;
+      font-weight: 700;
+      @include rem("font-size", 18);
+    }
+  }
+}
+
+.list-media-news {
+  @include rem("padding", 15, 0, 15, 0);
+  @include breakpoint(600) {
+    @include rem("padding", 30, 0, 30, 0);
+  }
+}

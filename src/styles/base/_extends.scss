@@ -1,0 +1,9 @@
+.container-block {
+  @include rem("padding", 30, 0, 30, 0);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: calc(100% - 30px);
+  }
+}

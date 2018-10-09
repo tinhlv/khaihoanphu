@@ -1,0 +1,59 @@
+.footer-container {
+  @include rem("min-height", 400);
+  background: linear-gradient(rgba(6, 6, 6, 0.5), rgba(32, 69, 107, 0.5)), url(../images/mountain.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include breakpoint(769) {
+    @include rem("min-height", 260);
+  }
+  .item-block {
+    @include breakpoint(600) {
+      width: 50% !important;
+    }
+
+    @include breakpoint(500) {
+      width: 100% !important;
+    }
+  }
+}
+
+.list-menu-footer {
+  @include rem("padding", 30, 0, 30, 0);
+  @include breakpoint(769) {
+    @include rem("padding", 15, 0, 15, 0);
+  }
+  .item {
+    @include rem("padding", 10, 0, 10, 0);
+    a {
+      color: $color-white;
+      text-transform: capitalize;
+      @include rem("font-size", 16);
+      font-family: $font-family;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+  }
+  .name-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    @include rem("font-size", 20);
+    font-family: $font-family;
+    font-weight: 700;
+    line-height: 1.4;
+    position: relative;
+    @include rem("padding-left", 35);
+    @include breakpoint(769) {
+      @include rem("padding-left", 20);
+      @include rem("font-size", 17);
+    }
+  }
+  .icon-item {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    &.icon-motorcycle {
+      @include rem("font-size", 28);
+    }
+  }
+}

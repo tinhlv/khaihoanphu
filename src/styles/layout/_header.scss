@@ -1,0 +1,150 @@
+// ----------------------------------------------------------------------
+// Header
+// ----------------------------------------------------------------------
+.header-content {
+  position: relative;
+  @include rem("min-height", 80px);
+  background: $bg-white;
+  .name-company {
+    @include rem("font-size", 23);
+    color: $color-primary;
+    font-weight: 700;
+    font-family: $font-family;
+    text-transform: uppercase
+  }
+  .hotline {
+    position: relative;
+    text-align: right;
+    .phone-item {
+      color: $color-primary;
+      font-weight: 700;
+      font-family: $font-family;
+      text-transform: uppercase;
+      display: inline-block;
+      @include rem("padding-left", 30);
+    }
+    &:before {
+      @include rem("font-size", 22);
+      content: "\e900";
+      font-family: $font-icon;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $color-red;
+    }
+  }
+}
+
+// ----------------------------------------------------------------------
+// Menu
+// ----------------------------------------------------------------------
+.p-menu {
+  padding: 0;
+  background: $color-primary;
+  color: $color-white;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  right: 0;
+  ul {
+    display: flex;
+    @include breakpoint(991) {
+      display: none;
+    }
+    .menu-item {
+      position: relative;
+      border-left: solid 1px rgba(255, 255, 255, 0.5);
+      .sub-menu {
+        position: absolute;
+        display: block;
+        height: 0;
+        opacity: 0;
+        top: 100px;
+        overflow: hidden;
+        left: 0;
+        transition-duration: 0.4s;
+        padding: 0;
+        @include rem("width", 250);
+        background: rgb(110, 13, 4);
+        li {
+          display: block;
+          border: none;
+          border-bottom: solid 1px #e896a2;
+          .link-menu {
+            width: 100%;
+            @include rem("padding", 0, 14, 0, 14);
+          }
+        }
+      }
+      &:hover {
+        ul {
+          height: auto;
+          opacity: 1;
+          top: 100%;
+          transition-duration: 0.4s;
+        }
+      }
+    }
+    .link-menu {
+      font-weight: 600;
+      @include rem("padding", 0, 35, 0, 35);
+      @include rem("font-size", 13);
+      display: block;
+      line-height: 40px;
+      color: $color-white;
+      text-transform: uppercase;
+      @include breakpoint(1199) {
+        @include rem("padding", 0, 25, 0, 25);
+      }
+      &:hover {
+        background: $color-primary;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* css sub menu */
+#menu {
+  position: absolute;
+  right: 0;
+}
+#menu {
+  @include rem("margin-top", 6);
+  @include rem("margin-right", 20);
+  outline: none;
+  background: none;
+  border: none;
+  @include rem("width", 30);
+  padding: 0;
+  display: inline-block;
+}
+#menu:before, #menu:after {
+  content: '';
+  display: block;
+  background: $color-white;
+  @include rem("height", 3);
+
+}
+#menu span {
+  background: #fff;
+  display: block;
+  @include rem("height", 3);
+  @include rem("margin", 6, 0, 6, 0);
+}
+/* end sub menu */
+#menu {
+  display: none;
+}
+@media (max-width: 991px) {
+  #menu {
+    display: block;
+    z-index: 1000;  
+    background: $color-primary;
+    @include rem("width", 40);
+    @include rem("height", 40);
+    @include roundedCorners(3);
+    @include rem("padding", 8, 8, 8, 8);
+ }
+}

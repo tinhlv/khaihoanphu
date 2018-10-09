@@ -36,6 +36,7 @@
 @import "mixins/vertical-align";
 @import "mixins/horizontal-align";
 @import "mixins/center-align";
+@import "mixins/rounded-corners";
 
 // ----------------------------------------------------------------------
 
@@ -59,4 +60,4 @@
   // Others mixin
 
 // ----------------------------------------------------------------------
-@import "mixins/others"
+@import "mixins/others";
