@@ -5,8 +5,12 @@
   }
   
   .card-title {
-    font-family: $font-family;
-    font-weight: 600;
+    a {
+      font-family: $font-family;
+      font-weight: 600;
+      @include rem("font-size", 14);
+      color: $color-text;
+    }
   }
 
   .card-body {
@@ -100,5 +104,19 @@
   @include rem("padding", 15, 0, 15, 0);
   @include breakpoint(600) {
     @include rem("padding", 30, 0, 30, 0);
+  }
+  h5 {
+    a {
+      font-family: $font-family;
+      font-weight: 600;
+      @include rem("font-size", 14);
+      color: $color-text;
+    }
+  }
+  .desc {
+    font-family: $font-family;
+    font-weight: 300;
+    @include rem("font-size", 13);
+    color: $color-text;
   }
 }
