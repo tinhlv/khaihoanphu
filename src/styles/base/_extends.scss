@@ -11,3 +11,27 @@
 a:hover, a:focus{
   color: $color-primary !important;
 }
+
+ol.breadcrumb {
+  border-radius: 0;
+  @include rem("font-size", 14);
+  font-family: $font-family;
+  background: none !important;
+  margin: 15px 0;
+  padding: 0px;
+  a, .fa {
+    color: #007CDC;
+  }
+}
+
+.pagination {
+  padding: 20px 0 !important;
+  .page-item.active .page-link {
+    background: $color-primary !important;
+    border-color: $color-primary !important;
+    color: $color-white !important;
+  }
+  .page-link {
+    color: $color-primary !important;
+  }
+}
